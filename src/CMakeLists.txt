@@ -1,4 +1,4 @@
-add_library(club STATIC event.cpp)
+add_library(club STATIC event.cpp config.cpp)
 target_include_directories(club PUBLIC ${PROJECT_SOURCE_DIR}/include)
 target_compile_options(club PRIVATE $<$<CONFIG:Debug>:-Wall;-Wextra;-Wpedantic;-fno-omit-frame-pointer;-fsanitize=address>)
 target_link_options(club PUBLIC $<$<CONFIG:Debug>:-fno-omit-frame-pointer;-fsanitize=address>)
