@@ -5,7 +5,7 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(googletest)
 
-add_executable(tests time.cpp config_parsing.cpp)
+add_executable(tests time.cpp config_parsing.cpp event_parsing.cpp club.cpp)
 target_link_libraries(tests PRIVATE club GTest::gtest_main)
 
 include(GoogleTest)
